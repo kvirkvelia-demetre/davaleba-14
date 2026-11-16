@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Shop</title>
+
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a class="logo" href="{% url 'home' %}">
+            My Shop
+        </a>
+
+        <div class="navbar-links">
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'products' %}">
+                Products
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
